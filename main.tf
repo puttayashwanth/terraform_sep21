@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "remote_s3" {
-    bucket = "s3-backend-bucket-11111"
+    bucket = "s3-backend-bucket-aaaaa-11111"
 	
 	versioning {
 		enabled = true 
@@ -11,7 +11,11 @@ resource "aws_s3_bucket" "remote_s3" {
 					sse_algorithm = "AES256"
 				}
 		}
-	}	
+	}
+
+	lifecycle {
+	      prevent_destroy = true
+	}
 }
 
 resource "aws_dynamodb_table" "backend_lock" {
