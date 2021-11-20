@@ -1,16 +1,9 @@
-resource "aws_s3_bucket" "remote_s3" {
-    bucket = var.bucket_name
-	
-	versioning {
-		enabled = true 
-	}
-	
-	server_side_encryption_configuration {
-		rule {
-				apply_server_side_encryption_by_default {
-					sse_algorithm = var.sse_type
-				}
-		}
+resource "aws_instance" "new_ec2" {
+	ami = var.ec2_ami
+	instance_type  = var.ec2_type
+	key_name = var.pem_key
+	tags = {
+		Name = var.instance_name
 	}
 
 }

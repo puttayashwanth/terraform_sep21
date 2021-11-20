@@ -1,10 +1,19 @@
-variable "bucket_name" {
+variable "ec2_ami" {
 	type = string
-	sensitive = true
-	default = "s3-backend-bucket-aaaaa-22222"
+	default = "ami-0567e0d2b4b2169ae"
 }
 
-variable "sse_type" {
+variable "ec2_type" {
 	type = string
-	default = "AES256"
+	default = "t2.micro"
+}
+
+variable "pem_key" {
+	type = string
+	default = "devopsep2021"
+}
+
+variable "instance_name" {
+	type = string
+	default = "test_instance"
 }
