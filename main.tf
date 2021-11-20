@@ -11,6 +11,10 @@ resource "aws_s3_bucket" "remote_s3" {
 					sse_algorithm = var.sse_type
 				}
 		}
-	}	
+	}
+
+	lifecycle {
+	      prevent_destroy = true
+	}
 }
 
