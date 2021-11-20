@@ -1,8 +1,8 @@
-varible "bucket_name" {
+variable "bucket_name" {
 	type = "string"
 }
 
-varible "sse_type" {
+variable "sse_type" {
 	type = "string"
 	default = "AES256"
 }
