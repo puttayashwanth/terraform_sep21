@@ -1,5 +1,6 @@
 variable "bucket_name" {
 	type = string
+	sensitive = true
 }
 
 variable "sse_type" {
