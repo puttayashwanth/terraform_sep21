@@ -12,3 +12,13 @@ module "aws_file_provisioner" {
 	instance_public_ip = module.aws_ec2_create.ec2_public_ip
 }
 
+module "aws_local_provisioner" {
+	source = "./modules/local-exec"
+	ec2_public_ip = module.aws_ec2_create.ec2_public_ip
+}
+
+module "aws_remote_provisioner" {
+	source = "./modules/remote-exec"
+	module_ec2_user = var.root_ec2_user
+	instance_public_ip = module.aws_ec2_create.ec2_public_ip
+}
