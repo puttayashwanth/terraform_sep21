@@ -17,3 +17,10 @@ variable "root_instance_name" {
 	type = string
 	default = "test_instance"
 }
+
+
+variable "root_ec2_user" {
+	type = string
+	default = "ubuntu"
+}
+

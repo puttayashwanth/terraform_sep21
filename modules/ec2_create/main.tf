@@ -6,7 +6,6 @@ resource "aws_instance" "module_ec2" {
 	tags = {
 		Name = var.module_instance_name
 	}
-
 }
 
 resource "aws_security_group" "sg" {
