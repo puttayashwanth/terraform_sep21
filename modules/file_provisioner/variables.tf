@@ -1,7 +1,7 @@
-varibale "module_ec2_user" {
+variable "module_ec2_user" {
 	type = string 
 }
 
-varibale "instance_public_ip" {
+variable "instance_public_ip" {
 	type = string 
 }
